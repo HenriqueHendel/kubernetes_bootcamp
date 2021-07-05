@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: henriquesantoslopes/rotten-potatoes:v1
+          image: henriquesantoslopes/rotten-potatoes
           ports:
             - containerPort: 5000
           env:
