@@ -32,8 +32,8 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.6.1
         with:
-          context: ./src
-          file: challenge/src/Dockerfile
+          context: challenge-03/rotten-potatoes-challenge/src
+          file: challenge-03/rotten-potatoes-challenge/src/Dockerfile
           push: true
           tags: |
             henriquesantoslopes/rotten-potatoes:latest
@@ -53,5 +53,5 @@ jobs:
         uses: Azure/k8s-deploy@v1
         with:
           manifests: |
-            challenge-03/k8s/deployment.yml
-            challenge-03/k8s/service.yml
+            challenge-03/rotten-potatoes-challenge/k8s/deployment.yml
+            challenge-03/rotten-potatoes-challenge/k8s/service.yml
